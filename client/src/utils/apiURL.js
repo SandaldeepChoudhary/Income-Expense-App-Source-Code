@@ -1,9 +1,9 @@
 export const API_URL_USER =
-  "http://localhost:3000/api/v1/users";
+  "http://localhost:8080/api/v1/users";
 export const API_URL_ACC =
-  "http://localhost:3000/api/v1/accounts";
+  "http://localhost:8080/api/v1/accounts";
 export const API_URL_TRANSACTION =
-  "http://localhost:3000/api/v1/transactions";
+  "http://localhost:8080/api/v1/transactions";
 
 // export const API_URL_USER =
 //   "https://radiant-peak-71363.herokuapp.com/api/v1/users";

@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { authContext } from "../context/AuthContext/AuthContext";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const { loginUserAction, userAuth } = useContext(authContext);
@@ -11,12 +12,12 @@ const Login = () => {
   const { email, password } = formData;
 
   //onChnage
-  const onChangeInput = e => {
+  const onChangeInput = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   //submit
-  const onSubmitHandler = e => {
+  const onSubmitHandler = (e) => {
     e.preventDefault();
 
     //dispatch action
@@ -82,21 +83,21 @@ const Login = () => {
                 </div>
               </div>
               <button
-                className="inline-block py-3 px-7 mb-6 w-full text-base text-green-50 font-medium text-center leading-6 bg-green-500 hover:bg-green-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md shadow-sm"
+                className="inline-block py-3 px-7 mb-6 w-full text-base text-green-50 font-medium text-center leading-6 bg-blue-500 hover:bg-blue-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md shadow-sm"
                 type="submit"
               >
                 Sign In
               </button>
               <p className="text-center">
-                <span className="text-xs font-medium">
+                <span className="text-xs font-medium ">
                   Don’t have an account?
                 </span>
-                <button
-                  className="inline-block text-xs font-medium text-green-500 hover:text-green-600 hover:underline"
-                  type="submit"
+                <Link
+                  to="/register"
+                  className="inline-block text-xs font-medium mx-1 text-green-500 hover:text-green-600 hover:underline"
                 >
                   Sign up
-                </button>
+                </Link>
               </p>
             </form>
           </div>

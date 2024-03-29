@@ -7,7 +7,7 @@ export default function AddAccount() {
   const { createAccountAction, error } = useContext(accountContext);
   const [formData, setFormData] = useState({
     title: "",
-    accountType: "",
+    accountType: "Savings",
     initialBalance: "",
     notes: "",
   });
@@ -23,7 +23,7 @@ export default function AddAccount() {
     e.preventDefault();
     createAccountAction(formData);
         // Redirect to the dashboard after form submission
-        navigate("/dashboard");  
+        navigate("/dashboard"); 
     
   };
 
@@ -117,7 +117,7 @@ export default function AddAccount() {
                   type="submit"
                   className="flex w-full  justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                 >
-                  Add New Transaction
+                  Add Account
                 </button>
               </div>
             </form>

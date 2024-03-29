@@ -5,7 +5,7 @@ import { authContext } from "../context/AuthContext/AuthContext";
 
 const Register = () => {
   const { registerUserAction, error } = useContext(authContext);
-  
+
   //form data
   const [formData, setFormData] = useState({
     fullname: "",
@@ -16,12 +16,12 @@ const Register = () => {
   const { fullname, email, password } = formData;
 
   //onChange
-  const onChangeInput = e => {
+  const onChangeInput = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   //Handle submit
-  const onSubmitHandler = e => {
+  const onSubmitHandler = (e) => {
     e.preventDefault();
     if (!email || !password || !fullname) {
       return alert("Please provide all details");
@@ -97,7 +97,13 @@ const Register = () => {
               </button>
               <p className="text-center">
                 <span className="text-xs font-medium">
-                  Already have an account? <Link to="/login">Sign in</Link>
+                  Already have an account?{" "}
+                  <Link
+                    to="/login"
+                    className="text-blue-500 hover:text-blue-600 hover:underline"
+                  >
+                    Sign in
+                  </Link>
                 </span>
               </p>
             </form>

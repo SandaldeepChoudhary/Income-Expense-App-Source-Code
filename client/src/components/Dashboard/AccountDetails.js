@@ -71,7 +71,7 @@ export default function AccountDetails() {
                           Total Balance
                         </dt>
                         <dd className=" text-5xl font-bold tracking-tight text-indigo-600">
-                        ₹{" "}
+                          ₹{" "}
                           {totalIncome +
                             account?.initialBalance -
                             totalExpenses}
@@ -82,7 +82,7 @@ export default function AccountDetails() {
                           Total Expenses
                         </dt>
                         <dd className=" text-5xl font-bold tracking-tight text-red-600">
-                        ₹ {totalExpenses}
+                          ₹ {totalExpenses}
                         </dd>
                         <Link
                           to={`/expenses-list/${3}`}
@@ -96,7 +96,7 @@ export default function AccountDetails() {
                           Total Income
                         </dt>
                         <dd className=" text-5xl font-bold tracking-tight text-green-600">
-                        ₹{totalIncome + account?.initialBalance}
+                          ₹{totalIncome + account?.initialBalance}
                         </dd>
                         <Link
                           to={`/income-list/${accountID}`}
